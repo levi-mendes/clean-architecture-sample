@@ -14,9 +14,7 @@ class AlbumViewModel(private val userCase: GetDetailsUserCause) : ViewModel() {
 
     fun getDetails(id: Int) {
         viewModelScope.launch {
-            val albumDetails = userCase.getDetails(id = id)
-
-            details.value = albumDetails
+            details.value = userCase.getDetails(id = id)
         }
     }
 }

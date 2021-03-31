@@ -13,8 +13,7 @@ class PhotoViewModel(private val userCase: GetPhotoUserCase) : ViewModel() {
 
     fun getPhoto() {
         viewModelScope.launch {
-            val url = userCase.getPhoto()
-            photo.value = url
+            photo.value = userCase.getPhoto()
         }
     }
 }

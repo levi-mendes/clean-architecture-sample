@@ -16,8 +16,7 @@ class MainViewModel(
 
     fun list() {
         viewModelScope.launch {
-            val list = userCase.list()
-            albums.value = list
+            albums.value = userCase.list()
         }
     }
 }
