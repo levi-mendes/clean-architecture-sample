@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturesample.presentation.album
+package com.example.cleanarchitecturesample.presentation.albumdetails
 
 import android.os.Bundle
 import com.example.cleanarchitecturesample.R

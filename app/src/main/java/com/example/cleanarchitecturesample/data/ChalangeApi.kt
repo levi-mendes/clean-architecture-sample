@@ -2,6 +2,7 @@ package com.example.cleanarchitecturesample.data
 
 import retrofit2.Retrofit
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 class ChalangeApi(retrofit: Retrofit) {
 
@@ -9,14 +10,12 @@ class ChalangeApi(retrofit: Retrofit) {
         retrofit.create(ChalangeService::class.java)
     }
 
-    //suspend fun list() =
-
     interface ChalangeService {
 
-        @GET
+        @GET("albums")
         suspend fun list(): List<AlbumDTO>
 
-        @GET
-        suspend fun details(id: Int): AlbumDetailsDTO
+        @GET("photos")
+        suspend fun details(@Query("albumId") id: Int): AlbumDetailsDTO
     }
 }

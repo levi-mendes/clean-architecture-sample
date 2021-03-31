@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanArchitectureSample">
         <activity android:name=".presentation.photo.PhotoActivity"></activity>
-        <activity android:name=".presentation.album.AlbumActivity" />
+        <activity android:name=".presentation.albumdetails.AlbumActivity" />
         <activity android:name=".presentation.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
