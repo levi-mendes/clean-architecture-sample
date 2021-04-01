@@ -10,6 +10,10 @@ class ChalangeApi(retrofit: Retrofit) {
         retrofit.create(ChalangeService::class.java)
     }
 
+    suspend fun list() = service.list()
+
+    suspend fun details(id: Int) = service.details(id = id)
+
     interface ChalangeService {
 
         @GET("albums")

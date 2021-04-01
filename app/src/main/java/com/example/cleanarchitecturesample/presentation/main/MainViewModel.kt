@@ -14,7 +14,7 @@ class MainViewModel(
 
     val albums = MutableLiveData<RequestState<List<AlbumEntity>>>()
 
-    fun list() {
+    init {
         viewModelScope.launch {
             albums.value = userCase.list()
         }
